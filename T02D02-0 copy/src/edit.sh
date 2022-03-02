@@ -1,11 +1,11 @@
 #!/bin/bash
 
-filename=$1
-search=$2
-replace=$3
+file=$1
+search_string=$2
+replace_string=$3
 
-if [[ $search!="" && $replace!="" ]]; then
-	sed -i '' "s/$search/$replace/" $filename
+if [[ $search_string!="" && $replace_string!="" ]]; then
+	sed -i '' "s/$search_string/$replace_string/g" $file
 fi
 
 dat=$(stat -f "%Sm" -t "%Y-%m-%d %H:%M" $filename)
